@@ -15,7 +15,8 @@ export const createProduct = async (req, res) => {
 
   try {
     newProduct.save();
-    res.status(201).json({ success: true, message: "Products being fetched from controllers" });
+    res.status(201).json({ success: true, message: "Products being fetched from controllers" })
+
   } catch (error) {
     console.log("Error in creating product", error.message);
     res.status(500).json({ success: false, message: "Failed to add product" });
